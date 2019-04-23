@@ -19,6 +19,11 @@ public class Movie implements Serializable {
     public Movie() {
     }
 
+    public Movie(String title, String genre) {
+        this.title = title;
+        this.genre = genre;
+    }
+
     public int getId() {
         return id;
     }
@@ -51,6 +56,10 @@ public class Movie implements Serializable {
 
     @Override
     public String toString() {
-        return "Title: " + getTitle() + "Genre: " + getGenre();
+        return "Title: " + getTitle() + " Genre: " + getGenre();
+    }
+
+    public boolean movieIsValid() {
+        return !getTitle().isEmpty() && !getGenre().isEmpty();
     }
 }
