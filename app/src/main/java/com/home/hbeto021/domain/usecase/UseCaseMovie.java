@@ -16,8 +16,9 @@ public class UseCaseMovie {
         repository = new MovieRepository(application);
     }
 
-    public boolean insert(Movie movie) {
-        if (movie != null && movie.movieIsValid()) {
+    public boolean insert(String titleMovie, String genreMovie) {
+        Movie movie = new Movie(titleMovie, genreMovie);
+        if (movie.movieIsValid()) {
             repository.insertMovie(movie);
             return true;
         } else {
