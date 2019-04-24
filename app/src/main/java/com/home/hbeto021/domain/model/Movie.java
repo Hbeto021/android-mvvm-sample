@@ -59,7 +59,8 @@ public class Movie implements Serializable {
         return "Title: " + getTitle() + " Genre: " + getGenre();
     }
 
-    public boolean movieIsValid() {
+    public boolean isMovieValid() {
+        //this method validates the movie fields
         return !getTitle().isEmpty() && !getGenre().isEmpty();
     }
 }
