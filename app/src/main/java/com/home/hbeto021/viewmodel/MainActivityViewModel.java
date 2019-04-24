@@ -24,7 +24,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public void insertMovie(String titleMovie, String genreMovie) {
         if (ucMovie.insert(titleMovie, genreMovie)) {
-            msgToUser.setValue("Movie has been added.");
+            msgToUser.setValue("The movie was added.");
         } else {
             msgToUser.setValue("Fail, there are some empty fields.");
         }
